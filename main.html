@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Awesome Dash</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+</head>
+
+
+<body>
+<div class = "splash">
+    <span>Awesome</span><span id = "splash-dash">Dash</span>
+</div>
+    <div class = "b">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h1>Awesome<span class="primary-text">Dash</h1></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id ="myAccount" href="#">My Account</a></li>
+                      <li class="nav-item">
+                      <a class="nav-link" id="signOut" href="#">Sign out</a></li>
+                  </ul>
+                        <div class = 'zip-div' style="margin: 20px 20px; display: grid; align-items: center; justify-items: center; grid-template-columns: 1fr 1fr;">
+                        <input class = "zip-input" type = "text" maxlength="5" style = "text-align: center; grid-column: 1/2;" placeholder= "Current Zip: ">
+                        <button class = "zip-btn" type="submit">Change Zip Code</button>
+                    </div>
+                </div>
+              </nav>
+
+<!-- News & Weather Section -->
+
+<!-- Main Content Area -->
+<section id="mainBody">
+    <!-- Sidebar -->
+    <div class="contianer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-lg-2 ">
+                        <ul>
+
+                            <li><a id="points-of-interest" href="#">Points of <br> Interest</a></li>
+
+                            <li><a id="ticketmaster" href="#">Ticketmaster</a></li>
+                        </ul>
+                    </div>
+                    <!-- Main Content Div -->
+                    <div class="mainContent col col-sm-12 col-md col-lg ">
+                        <div class="row">
+                                <section class="top col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                    <div class="cardWeather  col-sm-12 col-md-12 col-lg-6">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-center">Your Weather</h5>
+                                                                <p class="card-text weather"></p>
+                                                            </div>
+                                                        </div>
+                                                <div class="cardNews  col-sm-12 col-md-12 col-lg-6">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center">Top Headlines</h5>
+                                                        <p class="card-text news"></p>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer id="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-12 sticky-bottom footer">
+                <p id="footerText">©Copyright AwesomeDash</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- jquery with ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- moment js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+
+    <!-- Mapquest -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+
+    <!-- google geocoder apis -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgDydRtTBJLP4plVhI3GMFlV28zzb1hM"></script>
+
+
+    <!-- Our stuff -->
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- boostrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</div>
+
+</body>
+</html>
