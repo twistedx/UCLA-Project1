@@ -7,3 +7,6 @@ This was the first Project that my team and I created while attending the UCLA E
 Right now the user data is all stored in a firebase DB. The users DB entry is created off of the unique ID assigned to the user based on the OAuth ID that is passed back from the user signing in.
 
 This was a 2-week project and was a lot of fun to do!
+
+To see the project click here
+https://twistedx.github.io/UCLA-Project1/.
